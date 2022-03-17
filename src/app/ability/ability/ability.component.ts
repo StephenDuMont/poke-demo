@@ -12,7 +12,7 @@ export class AbilityComponent implements OnInit {
   url!: string;
   data: Move | undefined;
   get name() {return this.data?.names.filter(x => x.language.name === "en")[0].name}
-  get entry() { return this.data?.effect_entries.filter(x => x.language.name === "en")[0].effect}
+  get entry() { return this.data?.effect_entries.filter(x => x.language.name === "en")[0].short_effect}
   constructor(private http: HttpClient, private ref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
