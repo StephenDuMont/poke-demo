@@ -1,0 +1,15 @@
+
+<div *ngIf="this.data === null">card not found</div>
+<div *ngIf="this.data !== null">
+    <div class="main">
+        <div id="top-row">
+            <h1 id="name">{{this.data.name}}</h1>
+            <h1 id="hp">{{hp}} HP</h1>
+        </div>
+        <img [src]="this.data.sprites.front_default"/>
+        <div class="vital-stats">NO {{this.data.id}} {{this.data.types[0].type.name}} Pokemon  HT: {{this.data.height}} WT: {{this.data.weight}} lbs. </div>
+        <div *ngFor="let ability of this.data.abilities">
+            <app-ability [url]="ability.ability.url"></app-ability>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.main {
+    border: solid yellow 20px;
+    width: 600px;
+    background-color: rgb(221, 221, 0);
+    color: black;
+    padding: 5px;
+}
+#top-row {
+    width: 100%;
+    & > * { 
+        display: inline-block;
+        width: auto;
+        margin-top: 0px;
+    }
+    #hp {
+        float: right;
+        font-family: monospace;
+    }
+}
+img {
+    width: 80%;
+    margin: auto;
+    display: block;
+    border: 1px solid black;
+}
+.vital-stats {
+    text-align: center;
+}
